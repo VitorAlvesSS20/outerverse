@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap');
+
+/* VARIÁVEIS DE CORES */
+:root {
+  --color-abyss: #08080c;
+  --color-graphite: #0f1015;
+  --color-primary: #C41E3A;
+  --color-primary-light: #E63946;
+  --color-primary-dark: #8B0000;
+  --color-accent: #FF4444;
+  --color-gray-light: #1a1a20;
+  --color-gray-medium: #2a2a32;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #a0a0a0;
+  --font-header: 'Special Elite', cursive;
+  --font-body: 'Inter', 'Arial', sans-serif;
+}
+
+/* RESET E ESTILOS GLOBAIS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-abyss);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* EFEITO DE SCANLINE/INTERFERÊNCIA DE TV ANTIGA */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(196, 30, 58, 0.03),
+      rgba(196, 30, 58, 0.03) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-light);
+  text-shadow: 0 0 8px rgba(230, 57, 70, 0.5);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+button:hover {
+  background-color: var(--color-primary-light);
+  box-shadow: 0 0 12px rgba(230, 57, 70, 0.5);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* SCROLLBAR CUSTOMIZADA */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-graphite);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-light);
+}

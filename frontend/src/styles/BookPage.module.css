@@ -1,0 +1,518 @@
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 3fr;
+  gap: 0;
+  background-color: var(--color-abyss);
+}
+
+.mobileTopbar,
+.menuOverlay,
+.closeMenuButton {
+  display: none;
+}
+
+.sidebar {
+  background-color: var(--color-graphite);
+  border-right: 2px solid var(--color-primary);
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+  max-height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebarHeader {
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.backButton:hover {
+  background-color: var(--color-primary-light);
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
+}
+
+.backButton:active {
+  transform: scale(0.95);
+}
+
+.bookTitle {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  font-family: var(--font-header);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(196, 30, 58, 0.3);
+}
+
+.bookAuthor {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #3d1a1a;
+  padding-bottom: 0.75rem;
+}
+
+.musicPlayer {
+  background-color: rgba(196, 30, 58, 0.1);
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.playerTitle {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+  font-family: var(--font-header);
+}
+
+.playerControls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.playerBtn {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 40px;
+}
+
+.playerBtn:hover:not(:disabled) {
+  background-color: var(--color-primary-light);
+  box-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
+  transform: scale(1.1);
+}
+
+.playerBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.playBtn {
+  background-color: var(--color-primary-light);
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.3);
+  flex: 1.2;
+}
+
+.playBtn:disabled {
+  box-shadow: none;
+}
+
+.trackInfo {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.indexTitle {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-header);
+  letter-spacing: 0.05em;
+}
+
+.indexList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.indexItem {
+  background-color: transparent;
+  border: 1px solid #3d1a1a;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  border-left: 3px solid transparent;
+}
+
+.indexItem:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(196, 30, 58, 0.05);
+  transform: translateX(4px);
+}
+
+.indexItem.active {
+  background-color: #3d1a1a;
+  border-color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+  box-shadow: 0 0 8px rgba(196, 30, 58, 0.3);
+}
+
+.content {
+  padding: 3rem 4rem;
+  overflow-y: auto;
+  max-height: 100vh;
+  min-width: 0;
+}
+
+.contentHeader {
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 1.5rem;
+}
+
+.contentTitle {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  font-family: var(--font-header);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px rgba(196, 30, 58, 0.4);
+}
+
+.bookMetadata {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #3d1a1a;
+  color: var(--color-primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.chapterTitle {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  font-family: var(--font-header);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.chapterContent {
+  font-family: var(--font-body);
+  line-height: 2;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+
+.chapterContent p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.chapterContent p:first-letter {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.chapterNavigation {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #3d1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chapterCounter {
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.navButton {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: var(--color-primary-light);
+  box-shadow: 0 0 12px rgba(230, 57, 70, 0.5);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* SCROLLBAR CUSTOMIZADA PARA SIDEBAR */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: var(--color-abyss);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-light);
+}
+
+/* SCROLLBAR CUSTOMIZADA PARA CONTENT */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: var(--color-graphite);
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-light);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: block;
+    padding-top: 72px;
+  }
+
+  .mobileTopbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    width: 100%;
+    min-height: 72px;
+    padding: 0.75rem 1rem;
+    background: rgba(8, 8, 12, 0.94);
+    border-bottom: 1px solid rgba(196, 30, 58, 0.6);
+    backdrop-filter: blur(14px);
+  }
+
+  .menuButton {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--color-primary);
+    background: rgba(196, 30, 58, 0.16);
+  }
+
+  .menuButton span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: #fff;
+  }
+
+  .mobileTitleGroup {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .mobileTitleGroup strong {
+    color: var(--color-primary);
+    font-family: var(--font-header);
+    font-size: 1rem;
+    line-height: 1.15;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobileTitleGroup span {
+    color: var(--color-text-secondary);
+    font-size: 0.78rem;
+  }
+
+  .menuOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, background-color 0.25s ease;
+  }
+
+  .menuOverlayVisible {
+    background: rgba(0, 0, 0, 0.58);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 80;
+    width: min(88vw, 360px);
+    max-height: 100vh;
+    padding: 1.25rem;
+    border-right: 2px solid var(--color-primary);
+    border-bottom: none;
+    transform: translateX(-105%);
+    transition: transform 0.28s ease;
+    box-shadow: 20px 0 40px rgba(0, 0, 0, 0.45);
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .sidebarHeader {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .closeMenuButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid #3d1a1a;
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .content {
+    min-height: calc(100vh - 72px);
+    max-height: none;
+    overflow: visible;
+    padding: 2rem clamp(1.25rem, 5vw, 3rem);
+  }
+
+  .contentTitle {
+    font-size: 1.8rem;
+  }
+
+  .chapterTitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .indexItem {
+    min-width: auto;
+  }
+
+  .content {
+    padding: 1.5rem 1rem;
+  }
+
+  .contentTitle {
+    font-size: 1.4rem;
+  }
+
+  .chapterTitle {
+    font-size: 1.2rem;
+  }
+
+  .chapterContent {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .chapterContent p {
+    text-align: left;
+  }
+
+  .chapterNavigation {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chapterCounter {
+    order: -1;
+    text-align: center;
+  }
+
+  .navButton {
+    width: 100%;
+  }
+
+  .bookMetadata {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
