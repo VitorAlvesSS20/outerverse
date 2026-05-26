@@ -411,7 +411,7 @@ Vex não estava mais em uma sala de estudos, mas em um deserto de cinzas sob um 
 
 Ele sentiu seu próprio corpo começar a se desmanchar. Suas mutações, as fendas, os dedos alongados, não eram falhas; eram ganchos, alças de uma evolução que fora violentamente interrompida no meio do caminho.
 
-Ele viu o *Primum Cruor*: o estado de existência onde o Hemorrágico não sofria mais com a hemorragia, porque ele se tornava o próprio sangue. Uma entidade líquida capaz de moldar o mundo à sua vontade. Imortal, insaciável e divina. O Modo Carniçal que eles experimentavam na Academia era apenas um estalido de eletricidade comparado à tempestade eterna que era a mutação completa.
+Ele viu o Primum Cruor: o estado de existência onde o Hemorrágico não sofria mais com a hemorragia, porque ele se tornava o próprio sangue. Uma entidade líquida capaz de moldar o mundo à sua vontade. Imortal, insaciável e divina. O Modo Carniçal que eles experimentavam na Academia era apenas um estalido de eletricidade comparado à tempestade eterna que era a mutação completa.
 
 A visão era de uma beleza aterradora. Vex viu a si mesmo, não mais como um aluno pálido e doente, mas como um senhor da matéria vital, capaz de erguer castelos de hemoglobina e transformar exércitos em poças de plasma com um mero pensamento.
 
@@ -437,8 +437,154 @@ O garoto apertou o frasco em seu bolso. A era da contenção estava chegando ao 
       },
       {
         id: 5,
+        inserts: [
+          {
+            id: 'cap-5-separador-jardim',
+            type: 'separator',
+            afterParagraph: 4,
+            label: 'O Jardim das veias exaustas',
+          },
+          {
+            id: 'cap-5-imagem-pacto',
+            type: 'scare',
+            afterParagraph: 27,
+            triggerText: 'Selar o acordo',
+            src: 'https://media.discordapp.net/attachments/1507358778582896682/1508831245629390908/9d435ea08e91ccc957bfa06900100a15.jpg?ex=6a16f819&is=6a15a699&hm=70312aaa29d462d34aed11e2f0e056f216c35421cd0c433238dce98122f635cb&=&format=webp&width=821&height=821',
+            alt: 'Ele e Ela',
+            caption: 'Um aperto que mistura dores e desejos.',
+          },
+        ],
         title: 'A CONSPIRAÇÃO DAS FLORES DE LODO',
-        content: `— Em breve. . . —`,
+        content: `A noite na Abel Academy não era marcada pelo repouso, mas por uma mudança na frequência da agonia. Sob o teto artificial do Hemodome, a luminosidade empalidecia para um tom de lavanda doentio. As sombras pareciam se descolar das paredes para rastejar junto aos poucos que ousavam transitar pelos corredores.
+
+Vex movia-se como uma exalação de névoa. Sua figura esguia estava envolta em um manto de lã pesada que abafava o som de seus passos e escondia a mancha persistente de sangue que voltava a encharcar suas costelas.
+
+Ele atravessou a Ponte dos Suspiros — uma estrutura de ossos e ferro que ligava a ala dos Ocultistas aos jardins periféricos, onde os Vetores da Praga eram mantidos em um isolamento que beirava o esquecimento.
+
+Vex sentia o frasco de Mestre Vesper pesando em seu bolso como se contivesse o núcleo de uma estrela negra. Suas mãos, longas e dotadas de uma palidez de mármore, tremiam levemente. Não era de frio, mas pela ressonância da visão do Primum Cruor que ainda ardia em sua retina. Seus olhos, agora quase negros pela dilatação das pupilas, buscavam na penumbra a silhueta daquela que ousara nomear o indizível.
+
+O Jardim das Veias Exaustas era o seu destino. Um lugar onde a botânica e a patologia se fundiam em uma simbiose macabra. Lá, as árvores possuíam troncos que pulsavam como artérias, e as folhas gotejavam uma seiva salgada que nutria o solo infértil. Foi entre essas sombras vegetais que ele a encontrou.
+
+Seraphina estava agachada junto a um lago de águas estagnadas e leitosas, onde pétalas de fungos flutuavam como pequenos cadáveres. Sob a luz pálida, sua beleza aristocrática assumia contornos ainda mais predatórios. As hastes ósseas que irrompiam de suas costas projetavam-se como costelas externas, uma armadura de marfim que parecia se retorcer em resposta ao seu humor.
+
+Seu cabelo branco caía sobre o rosto como uma cortina de seda funerária. Ela não se virou quando ele se aproximou, mas as pequenas flores que brotavam de sua pele craquelada abriram-se simultaneamente, liberando uma fragrância de jasmim e podridão.
+
+— Você carrega o odor da heresia, Vex — disse ela, sua voz vibrando como uma corda de harpa prestes a romper. 
+— Mas há algo mais... O que aconteceu?
+
+Vex parou a poucos passos. O contraste entre eles era gritante: ele, a imagem da fragilidade intelectual e do controle ocultista; ela, a personificação da corrupção orgânica e do poder desenfreado.
+
+— Eu vi o Primum Cruor, Seraphina — sussurrou ele, aproximando-se o suficiente para ver o brilho prateado dos olhos dela. 
+— Vi a divindade que nos foi roubada e o preço que os Pastores cobram para nos manter nestas cascas de sofrimento.
+
+Seraphina levantou-se com uma lentidão coreografada. Ela era mais alta que Vex, e sua presença parecia preencher o espaço ao redor, como se a própria atmosfera se curvasse à sua vontade. Ela estendeu a mão de unhas negras e tocou o peito de Vex, exatamente sobre o local onde suas fendas pulsavam sob o tecido.
+
+— Eles nos chamam de doentes para que não percebamos que somos deuses em crisálida.. — ela murmurou, os lábios pálidos curvando-se em um sorriso vazio. 
+— Mas uma revolução não se faz com visões, Ocultista. 
+
+Vex retirou o frasco de líquido negro de seu bolso.
+
+— Vesper me deu isso. Memórias de quem veio antes.
+
+Seraphina olhou para o frasco com uma reverência faminta.
+
+— Então a conspiração não é mais apenas um sussurro entre os Vetores. Se o Guardião dos Códices tomou partido, o selo do Hemodome está mais frágil do que o Decano Thorne imagina! Mas para o que pretendo, Vex.. precisarei de sua arte. Os Vetores podem corromper a carne, mas os Ocultistas podem reescrever os vínculos.
+
+Ela conduziu Vex para o centro de um círculo de árvores. O chão ali era coberto por um tapete de musgo rubro que parecia respirar em uníssono.
+
+— Thorne planeja um expurgo — continuou ela, sua voz agora um murmúrio conspiratório. 
+— Ele sabe que o incidente no refeitório foi um presságio. Em breve, os Pacificadores virão buscar os "instáveis" para levá-los ao Coração do Domo. Eles dizem que é para tratamento. Eu digo que é para alimentar a fornalha que mantém as barreiras mentais da Academia.
+
+Vex sentiu um calafrio percorrer a espinha.
+
+— O que você propõe?
+
+— Uma contaminação dirigida. — Seraphina aproximou-se tanto que suas hastes ósseas quase tocaram os ombros dele. 
+— Eu fornecerei a semente da Praga Carmim, refinada pelo meu próprio sofrimento. Você, através do seu domínio sobre o sangue, a transformará em uma "chave" líquida. Infectaremos o sistema de distribuição de leite. Quando eles tentarem nos conter, não encontrarão carne obediente, mas retaliação.
+
+A audácia do plano deixou Vex momentaneamente sem fôlego. Atacar a infraestrutura da Academia era um caminho sem volta para o cadafalso ou para a libertação. Ele olhou para as mãos de Seraphina e depois para as suas. Via o destino de ambos entrelaçado como as raízes das árvores ao redor: uma aliança de sangue e podridão contra a ordem de mármore e ferro.
+
+— Precisaremos de mais aliados — disse Vex, sua mente ocultista já traçando as linhas de força necessárias para o ritual. 
+— Os Hemofílicos precisam ser despertados. Eles serão a nossa força de choque quando o sistema falhar.
+
+— Não precisa se preocupar, eu cuido dos famintos — prometeu Seraphina. 
+— Eles seguem o cheiro da corrupção.. E eu sou a rainha deles.
+
+Ela estendeu o braço, expondo a pele craquelada onde as flores pulsavam.
+
+— Sele o pacto, Ocultista. Que o Príncipe do Sangue seja testemunha de que a argila decidiu moldar a si mesma!
+
+O rapaz não hesitou. Retirou um estilete de prata de sua manga e fez um corte preciso na palma da mão. O sangue carmim, carregado com a potência do Sangue Tipo C, brotou instantaneamente. Seraphina fez o mesmo, mas o fluido que emanava dela era mais escuro, denso e repleto de esporos brilhantes.
+
+Eles uniram as palmas das mãos no centro do Jardim das Veias Exaustas.
+
+No momento em que seus sangues se tocaram, uma onda de choque invisível percorreu o jardim. As árvores ao redor vibraram, e a seiva que gotejava das folhas tornou-se subitamente quente. Vex sentiu a mente de Seraphina — um labirinto de dor antiga, fúria e uma fome de liberdade que eclipsava a sua própria. Ela sentiu nele a precisão cirúrgica, a melancolia dos séculos e a vontade inquebrável de transcender.
+
+Eles não eram mais apenas dois alunos da Academia. Eram os arquitetos de uma nova ordem. Dois Hemorrágicos que decidiram que a hemorragia constante não era uma fraqueza, mas o combustível para incendiar o mundo que os prendia.
+
+— A conspiração tem um nome agora — sussurrou Seraphina, enquanto desfaziam o aperto, deixando que a mistura de seus fluidos caísse sobre o musgo, que instantaneamente floresceu em um roxo violento. — Chamaremos de A Eucaristia Escarlate.
+
+O jovem assentiu, guardando o frasco de memórias com uma nova finalidade. Ele olhou para o topo do Hemodome, onde a luz artificial parecia vacilar. Pela primeira vez em sua vida, a dor constante em seu corpo não parecia um fardo. Era o lembrete de que ele estava vivo — e que a vida deles era uma arma prestes a ser disparada contra o coração de seus opressores.`,
+      },
+      {
+        id: 6,
+        inserts: [
+          {
+            id: 'cap-6-engenheiro',
+            type: 'scare',
+            triggerText: 'O Engenheiro',
+            afterParagraph: 11,
+            src: 'https://media.discordapp.net/attachments/1507358778582896682/1508836367558377624/7b3ce8fc7a86a3949fd23d5032e73f44.jpg?ex=6a16fcde&is=6a15ab5e&hm=723a95211c41561bbd863cccffcfaf24f942ffe7b028d9b74d1fbe77b1cb4721&=&format=webp&width=800&height=800',
+            alt: 'Cruel',
+            caption: 'Carne e metal em agonia.',
+          },
+          {
+            id: 'cap-6-revolucao',
+            type: 'separator',
+            afterParagraph: 14,
+            label: '— Revolução —',
+          },
+        ],
+        title: 'VEIAS DE LATÃO E O EXPURGO DA ALVORADA',
+        content: `A descida de Vex para o Hypogeum Lactante assemelhava-se a uma incursão cirúrgica nas entranhas de um leviatã adormecido. Longe da elegância gótica das salas de aula e da crueza orgânica dos jardins de Seraphina, os subsolos da Academia Abel eram um reino de vapor opaco, engrenagens colossais e um frio industrial que parecia querer congelar o próprio fluxo vital em suas veias. Ali, a arquitetura abandonava o mármore em favor do bronze oxidado e do ferro fundido, erguendo uma rede labiríntica de tubulações que pulsavam no ritmo cardíaco e mecânico da instituição.
+
+Vex movia-se com a cautela de um espectro. Sua constituição física, sempre no limiar da fragilidade, era agora sua maior aliada; ele deslizava entre as sombras projetadas pelos grandes tanques de decantação, sua pele pálida absorvendo a luminescência azulada das lâmpadas de mercúrio. Sob o manto de lã, seus dedos longos apertavam o amálgama alquímico que criara com Seraphina: um frasco de vidro reforçado onde o sangue negro das memórias de Vesper e os esporos carmíneos da Praga dançavam em uma suspensão letal. As fendas em seu pescoço latejavam, ardendo em uníssono com o baque surdo das bombas hidráulicas.
+
+A atmosfera ali era densa, saturada por um vapor esbranquiçado que cheirava a gordura animal e ozônio chamuscado. Era o leite — a seiva da contenção química da Academia — sendo processado, filtrado e distribuído. Para um Hemorrágico, caminhar naquele lugar era flertar com o suplício: a tentação do alívio estava em cada junção de metal, mas a realidade do sistema era a sua prisão perpétua.
+
+De repente, o som pesado e cadenciado de passos metálicos ecoou pela galeria de bronze. O rapaz colou-se a uma coluna de sustentação, prendendo a respiração.
+
+Das brumas de vapor, emergiu um Pacificador de Patrulha. A visão era um testemunho da crueldade utilitária dos Pastores. O autômato era uma construção alta de latão, com membros alongados que rangiam a cada articulação. Seu rosto não passava de uma placa cega, de onde emanava uma luz âmbar que varria o chão como um farol inquisidor. Não possuindo uma única gota de sangue, o Pacificador era imune à aura de medo ou manipulação que os Hemorrágicos costumavam emanar; ele era apenas lógica, engrenagens e aço, programado para detectar a síncope de um coração humano ou o calor de uma mutação ativa.
+
+Vex fechou os olhos e concentrou-se na pequena reserva de sangue que mantinha sob a pele das pontas dos dedos. Como um Ocultista Carmim, não precisava de grandes encenações para invocar suas artes. Permitiu que uma gota minúscula escapasse de um poro, moldando-a mentalmente no sigilo oculto da Refração Hemática.
+
+O sangue não caiu. Flutuou no ar frio, expandindo-se em uma película molecular e finíssima que envolveu o corpo do garoto, distorcendo a forma como a luz e o calor eram emitidos por ele.
+
+O Pacificador passou a escassos centímetros de sua posição. O jovem podia sentir o calor sufocante irradiado pela caldeira interna da máquina e o cheiro acre de óleo lubrificante queimado. A luz âmbar varreu seu rosto invisível, mas a magia de ocultação manteve-o como um vácuo nos sensores do autômato.
+
+Quando a máquina finalmente desapareceu na névoa de latão, Vex soltou o ar, sentindo o esforço cobrar seu preço imediato: seu coração martelava violentamente contra as costelas, e uma dor aguda, como uma agulha de gelo, perfurou sua têmpora. Cada ato de magia era uma pequena hemorragia na alma.
+
+Ele continuou sua jornada pelas galerias inferiores até atingir o Coração da Distribuição: a Grande Válvula de Aorta. Era uma câmara circular imensa, dominada por uma estrutura monumental de vidro e aço que lembrava um cálice invertido. Lá dentro, milhares de litros do leite purificado giravam em um vórtice alvo e constante antes de serem injetados nos canos que abasteciam os refeitórios e alas de isolamento. Era o ponto de convergência de toda a dormência do Domo.
+
+No centro da câmara, suspenso por cabos e vigiando os manômetros de pressão, estava o Engenheiro de Sangue. Ele era o vislumbre do pior destino de um Hemorrágico: uma criatura cujas mutações haviam sido totalmente domesticadas e escravizadas pela infraestrutura da Academia Abel. Seus braços originais haviam sido amputados e substituídos por próteses mecânicas integradas diretamente aos painéis de controle; seus olhos haviam sido costurados com linha grossa, substituídos por feixes de fios ópticos que o conectavam à consciência fria da máquina. Ele era menos um homem e mais um componente biológico descartável.
+
+Vex sabia que não haveria diálogo ou misericórdia com tal criatura. Movendo-se com uma precisão gélida e cirúrgica, ele retirou o frasco de sua veste. O líquido lá dentro pulsava agora com uma cor violeta-escura, quase viva — as memórias de Vesper e a praga de Seraphina ansiando por libertação.
+
+Ele subiu a passos silenciosos pela estrutura de suporte, o metal frio congelando suas palmas. Ao atingir o topo do tanque principal, encontrou o duto de ventilação e alimentação primária. Com um movimento seco e determinado, Vex quebrou o selo do frasco. O aroma que emanou dali era algo que nunca deveria ter existido na criação: o cheiro de séculos de sofrimento e opressão condensados em uma essência acre e revoltante.
+
+— Que esta seja a nossa última ceia de escravos — sussurrou ele para o abismo, vertendo o conteúdo corrompido para dentro do vórtice alvo.
+
+A reação foi instantânea e violenta. Onde o composto negro tocava o leite branco, não havia diluição passiva, mas uma colonização agressiva. Filamentos de um vermelho doentio e pulsante começaram a se espalhar pelo tanque a velocidades assustadoras, como se o próprio líquido estivesse gerando veias de carne.
+
+A brancura imaculada foi inteiramente manchada por veios de corrupção que brilhavam com uma luz interna e febril. A Praga de Seraphina encontrava naquele nutriente concentrado o meio de cultura perfeito para sua expansão geométrica.
+
+O Engenheiro de Sangue lá embaixo soltou um ganido eletrônico agudo, misturado a um choro humano engasgado. Seus fios ópticos começaram a ejetar faíscas violentas, e as máquinas ao redor gemeram sob a mudança súbita na viscosidade e na densidade do fluido. O sistema estava sendo violentamente reescrito. O leite, antes o anestésico que mantinha a raça sob cabresto, estava se tornando o veículo do seu despertar sangrento — ou de sua destruição final.
+
+O jovem ocultista não esperou para ver o resultado completo. Ele sabia que os alarmes pneumáticos dos Pastores seriam soados em minutos. Desceu da estrutura de suporte com saltos ágeis, seus movimentos agora impulsionados por uma descarga de adrenalina que ignorava o cansaço crônico de seu corpo mutilado.
+
+Ao chegar ao chão de bronze da galeria, Vex ajustou o manto de lã sobre as costelas feridas e olhou uma última vez para trás. A Grande Válvula de Aorta brilhava em tons de carmim e violeta através do vidro.
+
+O leite que agora corria em direção às mesas dos alunos da Academia Abel carregava a semente da insurreição, as vozes vingativas dos ancestrais e a fúria indomável dos infectados. A alvorada estava chegando, e ela seria pintada de escarlate.`
       },
     ],
   },
