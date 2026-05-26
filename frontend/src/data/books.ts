@@ -89,7 +89,6 @@ export const books: Book[] = [
             afterParagraph: 6,
             src: 'https://media.discordapp.net/attachments/1507358778582896682/1508654144221614090/77f738bf86188c93746c3a91c80ee32b.jpg?ex=6a165329&is=6a1501a9&hm=aea60710d5d5eff1489eda5ad095cb02c1dd1255e4e39ce8bc9fbdea6f74bedd&=&format=webp&width=920&height=306',
             alt: 'Corredor escuro com luz vermelha atravessando a nevoa',
-            caption: 'Os corredores proximos ao refeitorio pareciam respirar antes do incidente.',
           },
           {
             id: 'cap-1-susto-porcelana',
@@ -258,7 +257,6 @@ Vex permaneceu ali, entre os destroços de porcelana e os ecos de gritos silenci
             triggerText: 'Aproximar-se da banheira',
             src: 'https://media.discordapp.net/attachments/1507358778582896682/1508799075338686644/4c49b518b2597fc42d1f9f6ffa56eb65.jpg?ex=6a16da23&is=6a1588a3&hm=b8475572340fd63d7c95cc5cb9218335d6225cb5aeb085441fb7d052770803a6&=&format=webp&width=920&height=920',
             alt: 'Corredor subterrâneo com uma leve neblina',
-            caption: 'Os túneis da Academia Abel respiravam com uma vida própria, antiga e corrompida.',
           },
           {
             id: 'cap-3-separador-seraphina',
@@ -273,7 +271,6 @@ Vex permaneceu ali, entre os destroços de porcelana e os ecos de gritos silenci
             triggerText: 'Corpo hipnotizante emerge da banheira',
             src: 'https://media.discordapp.net/attachments/1507358778582896682/1508802907217334282/afd39e0360419f086cb28b73f6d6aa15.jpg?ex=6a16ddb5&is=6a158c35&hm=e178f78e5900493bab126b819f39b0dade7b8f9be1f61f972bc4f1663e7ee7b7&=&format=webp&width=445&height=445',
             alt: 'Banheira de leite',
-            caption: 'O leite alquímico guardava os segredos de mutações que o conhecimento comum jamais poderia compreender.',
           },
           {
             id: 'cap-3-separador-verdade',
