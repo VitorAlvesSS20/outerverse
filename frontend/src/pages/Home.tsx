@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { books } from '../data/books';
 import { playSound } from '../hooks/useAudio';
+import { useScrollToTop } from '../hooks/useScrollToTop';
+import ThemeToggle from '../components/ThemeToggle';
 import styles from '../styles/Home.module.css';
 
 const socialLinks = [
@@ -15,9 +17,11 @@ const socialLinks = [
 ];
 
 export default function Home() {
+  useScrollToTop();
   return (
     <div className={styles.container}>
       <header className={styles.header}>
+        <ThemeToggle />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Contos não tão heroicos</p>
           <h1 className={styles.title}>— OUTERVERSE —</h1>
