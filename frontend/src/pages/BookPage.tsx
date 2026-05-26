@@ -2,9 +2,11 @@ import { Fragment, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { books, type ChapterInsert } from '../data/books';
 import { playSound, useAudioPlayer } from '../hooks/useAudio';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 import styles from '../styles/BookPage.module.css';
 
 export default function BookPage() {
+  useScrollToTop();
   const { bookId } = useParams<{ bookId: string }>();
   const navigate = useNavigate();
   const [selectedChapterId, setSelectedChapterId] = useState(1);
