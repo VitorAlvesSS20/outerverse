@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { books } from '../data/books';
+import { books, type ChapterInsert } from '../data/books';
 import { playSound, useAudioPlayer } from '../hooks/useAudio';
 import styles from '../styles/BookPage.module.css';
 
@@ -11,6 +11,7 @@ export default function BookPage() {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isChapterMenuOpen, setIsChapterMenuOpen] = useState(false);
+  const [revealedScares, setRevealedScares] = useState<Set<string>>(new Set());
 
   const book = books.find((b) => b.id === Number(bookId));
 
@@ -37,20 +38,19 @@ export default function BookPage() {
   const handleChapterChange = (chapterId: number) => {
     playSound(undefined, 0.35);
     setSelectedChapterId(chapterId);
+    setRevealedScares(new Set());
     setIsChapterMenuOpen(false);
   };
 
   const handlePreviousChapter = () => {
     if (selectedChapterId > 1) {
-      playSound(undefined, 0.35);
-      setSelectedChapterId(Math.max(1, selectedChapterId - 1));
+      handleChapterChange(Math.max(1, selectedChapterId - 1));
     }
   };
 
   const handleNextChapter = () => {
     if (selectedChapterId < book.chapters.length) {
-      playSound(undefined, 0.35);
-      setSelectedChapterId(Math.min(book.chapters.length, selectedChapterId + 1));
+      handleChapterChange(Math.min(book.chapters.length, selectedChapterId + 1));
     }
   };
 
@@ -77,6 +77,96 @@ export default function BookPage() {
 
     playSound(undefined, 0.35);
     setCurrentTrackIndex((currentTrackIndex + 1) % book.musicTracks.length);
+  };
+
+  const revealScare = (insertId: string) => {
+    playSound(undefined, 0.8);
+    setRevealedScares((current) => new Set(current).add(insertId));
+  };
+
+  const renderInsert = (insert: ChapterInsert) => {
+    if (insert.type === 'separator') {
+      return (
+        <div className={styles.chapterSeparator}>
+          {insert.label && <span>{insert.label}</span>}
+        </div>
+      );
+    }
+
+    if (insert.type === 'image') {
+      return (
+        <figure className={styles.mediaFigure}>
+          <img className={styles.mediaImage} src={insert.src} alt={insert.alt} loading="lazy" />
+          {insert.caption && <figcaption className={styles.mediaCaption}>{insert.caption}</figcaption>}
+        </figure>
+      );
+    }
+
+    if (insert.type === 'video') {
+      return (
+        <figure className={styles.mediaFigure}>
+          <video
+            className={styles.mediaVideo}
+            src={insert.src}
+            poster={insert.poster}
+            controls
+            autoPlay={insert.autoPlay}
+            loop={insert.loop}
+            muted={insert.muted ?? true}
+            playsInline
+          />
+          {insert.caption && <figcaption className={styles.mediaCaption}>{insert.caption}</figcaption>}
+        </figure>
+      );
+    }
+
+    const isRevealed = revealedScares.has(insert.id);
+
+    return (
+      <div className={`${styles.scareBlock} ${isRevealed ? styles.scareBlockRevealed : ''}`}>
+        {!isRevealed ? (
+          <button className={styles.scareButton} onClick={() => revealScare(insert.id)}>
+            {insert.triggerText}
+          </button>
+        ) : (
+          <figure className={styles.scareReveal}>
+            <img className={styles.scareImage} src={insert.src} alt={insert.alt} loading="lazy" />
+            {insert.caption && <figcaption className={styles.mediaCaption}>{insert.caption}</figcaption>}
+          </figure>
+        )}
+      </div>
+    );
+  };
+
+  const renderChapterContent = () => {
+    if (!selectedChapter) return null;
+
+    const paragraphs = selectedChapter.content.split('\n\n');
+    const inserts = selectedChapter.inserts || [];
+    const insertsBeforeText = inserts.filter((insert) => insert.afterParagraph === 0);
+
+    return (
+      <>
+        {insertsBeforeText.map((insert) => (
+          <Fragment key={insert.id}>{renderInsert(insert)}</Fragment>
+        ))}
+        {paragraphs.map((paragraph, index) => {
+          const paragraphNumber = index + 1;
+          const paragraphInserts = inserts.filter(
+            (insert) => insert.afterParagraph === paragraphNumber
+          );
+
+          return (
+            <Fragment key={`${selectedChapter.id}-${paragraphNumber}`}>
+              <p>{paragraph}</p>
+              {paragraphInserts.map((insert) => (
+                <Fragment key={insert.id}>{renderInsert(insert)}</Fragment>
+              ))}
+            </Fragment>
+          );
+        })}
+      </>
+    );
   };
 
   return (
@@ -210,11 +300,7 @@ export default function BookPage() {
 
             <article>
               <h2 className={styles.chapterTitle}>{selectedChapter.title}</h2>
-              <div className={styles.chapterContent}>
-                {selectedChapter.content.split('\n\n').map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </div>
+              <div className={styles.chapterContent}>{renderChapterContent()}</div>
             </article>
 
             <nav className={styles.chapterNavigation}>

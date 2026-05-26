@@ -6,32 +6,27 @@ import styles from '../styles/Home.module.css';
 const socialLinks = [
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/seuusuario',
+    href: 'https://www.instagram.com/reels/DXjhw4mOtvC/',
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/seuusuario',
+    href: 'https://github.com/VitorAlvesSS20',
   },
 ];
 
 export default function Home() {
-
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.heroContent}>
-          <p className={styles.eyebrow}>Contos não tão heróicos</p>
-          <h1 className={styles.title}>OUTERVERSE</h1>
+          <p className={styles.eyebrow}>Contos não tão heroicos</p>
+          <h1 className={styles.title}>— OUTERVERSE —</h1>
           <p className={styles.subtitle}>Antologias de Terror & Suspense</p>
           <p className={styles.author}>Por Verso</p>
           <p className={styles.description}>
-            Bem-vindo aos arquivos perdidos da Outerverse. Aqui residem relatos de
-            acontecimentos que desafiam explicação racional, catalogados como documentos
-            proibidos, testemunhos corrompidos e memórias que ainda respiram no escuro.
+            Olá, pode me chamar de Verso, e eu sou um escritor de contos sobrenaturais e fantasiosos com uma estética sombria. Sinta-se a vontade para explorar os arquivos que compartilho aqui, cada um é uma porta de entrada para um universo ferido que possui além das Escrituras: imagens, interações e até mesmo trilhas sonoras.
           </p>
         </div>
-
-        
       </header>
 
       <section className={styles.introSection}>
@@ -40,14 +35,13 @@ export default function Home() {
           <p>
             Cada história funciona como um dossiê narrativo: personagens quebrados,
             mutações, instituições opressivas e fenômenos que parecem científicos até
-            começarem a sangrar. Escolha um arquivo, acione a trilha e leia como quem
-            abre uma porta que talvez não feche de novo.
+            começarem a sangrar.
           </p>
         </div>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>ARQUIVOS DISPONÍVEIS</h2>
+        <h2 className={styles.sectionTitle}>Arquivos disponíveis</h2>
         <div className={styles.grid}>
           {books.map((book) => (
             <article key={book.id} className={styles.bookCard}>
@@ -58,22 +52,25 @@ export default function Home() {
                   className={styles.coverImage}
                 />
               </div>
-              <h3 className={styles.bookTitle}>{book.title}</h3>
-              <p className={styles.bookDescription}>{book.description}</p>
-              <div className={styles.tags}>
-                {book.tags.map((tag, index) => (
-                  <span key={index} className={styles.tag}>
-                    {tag}
-                  </span>
-                ))}
+              <div className={styles.bookInfo}>
+                <p className={styles.archiveCode}>Arquivo 0{book.id}</p>
+                <h3 className={styles.bookTitle}>{book.title}</h3>
+                <p className={styles.bookDescription}>{book.description}</p>
+                <div className={styles.tags}>
+                  {book.tags.map((tag, index) => (
+                    <span key={index} className={styles.tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  to={`/livro/${book.id}`}
+                  onClick={() => playSound(undefined, 0.35)}
+                  className={styles.openLink}
+                >
+                  <button className={styles.openButton}>▶ Abrir arquivo</button>
+                </Link>
               </div>
-              <Link
-                to={`/livro/${book.id}`}
-                onClick={() => playSound(undefined, 0.35)}
-                className={styles.openLink}
-              >
-                <button className={styles.openButton}>▶ ABRIR ARQUIVO</button>
-              </Link>
             </article>
           ))}
         </div>

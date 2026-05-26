@@ -3,7 +3,9 @@
   display: grid;
   grid-template-columns: minmax(280px, 1fr) 3fr;
   gap: 0;
-  background-color: var(--color-abyss);
+  background:
+    linear-gradient(90deg, rgba(196, 30, 58, 0.05), transparent 38%),
+    var(--color-abyss);
 }
 
 .mobileTopbar,
@@ -13,8 +15,10 @@
 }
 
 .sidebar {
-  background-color: var(--color-graphite);
-  border-right: 2px solid var(--color-primary);
+  background:
+    linear-gradient(180deg, rgba(196, 30, 58, 0.08), transparent 260px),
+    var(--color-graphite);
+  border-right: 1px solid rgba(196, 30, 58, 0.72);
   padding: 2rem 1.5rem;
   overflow-y: auto;
   max-height: 100vh;
@@ -27,7 +31,7 @@
 }
 
 .backButton {
-  background-color: var(--color-primary);
+  background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -37,7 +41,7 @@
   font-family: var(--font-body);
   font-size: 0.85rem;
   transition: all 0.3s ease;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -56,7 +60,8 @@
   color: var(--color-primary);
   font-family: var(--font-header);
   margin-bottom: 0.5rem;
-  text-shadow: 0 0 10px rgba(196, 30, 58, 0.3);
+  line-height: 1.25;
+  text-shadow: 0 0 12px rgba(196, 30, 58, 0.35);
 }
 
 .bookAuthor {
@@ -64,13 +69,14 @@
   color: var(--color-text-secondary);
   font-style: italic;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #3d1a1a;
+  border-bottom: 1px solid var(--color-line);
   padding-bottom: 0.75rem;
 }
 
 .musicPlayer {
-  background-color: rgba(196, 30, 58, 0.1);
-  border: 1px solid var(--color-primary);
+  background:
+    linear-gradient(135deg, rgba(196, 30, 58, 0.12), rgba(216, 180, 106, 0.04));
+  border: 1px solid rgba(196, 30, 58, 0.58);
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -80,7 +86,7 @@
   font-size: 0.9rem;
   color: var(--color-primary);
   margin-bottom: 0.75rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   font-family: var(--font-header);
 }
 
@@ -92,7 +98,7 @@
 }
 
 .playerBtn {
-  background-color: var(--color-primary);
+  background: rgba(196, 30, 58, 0.75);
   color: #fff;
   border: none;
   width: 40px;
@@ -120,7 +126,7 @@
 }
 
 .playBtn {
-  background-color: var(--color-primary-light);
+  background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
   box-shadow: 0 0 10px rgba(230, 57, 70, 0.3);
   flex: 1.2;
 }
@@ -141,7 +147,7 @@
   color: var(--color-primary);
   margin-bottom: 1rem;
   font-family: var(--font-header);
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
 }
 
 .indexList {
@@ -152,8 +158,8 @@
 }
 
 .indexItem {
-  background-color: transparent;
-  border: 1px solid #3d1a1a;
+  background-color: rgba(8, 8, 12, 0.24);
+  border: 1px solid var(--color-line);
   border-radius: 4px;
   padding: 0.75rem 1rem;
   cursor: pointer;
@@ -165,12 +171,12 @@
 
 .indexItem:hover {
   border-color: var(--color-primary);
-  background-color: rgba(196, 30, 58, 0.05);
+  background-color: rgba(196, 30, 58, 0.08);
   transform: translateX(4px);
 }
 
 .indexItem.active {
-  background-color: #3d1a1a;
+  background: linear-gradient(90deg, rgba(196, 30, 58, 0.28), rgba(196, 30, 58, 0.08));
   border-color: var(--color-primary);
   border-left-color: var(--color-primary);
   color: var(--color-primary);
@@ -179,15 +185,16 @@
 }
 
 .content {
-  padding: 3rem 4rem;
+  padding: 3.5rem clamp(2rem, 6vw, 5rem);
   overflow-y: auto;
   max-height: 100vh;
   min-width: 0;
 }
 
 .contentHeader {
-  margin-bottom: 3rem;
-  border-bottom: 2px solid var(--color-primary);
+  max-width: 860px;
+  margin: 0 auto 3rem;
+  border-bottom: 1px solid rgba(196, 30, 58, 0.7);
   padding-bottom: 1.5rem;
 }
 
@@ -197,6 +204,7 @@
   font-family: var(--font-header);
   margin-bottom: 0.5rem;
   text-shadow: 0 0 15px rgba(196, 30, 58, 0.4);
+  line-height: 1.15;
 }
 
 .bookMetadata {
@@ -213,13 +221,13 @@
 }
 
 .tag {
-  background-color: #3d1a1a;
-  color: var(--color-primary);
+  background-color: rgba(196, 30, 58, 0.12);
+  color: var(--color-text-primary);
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
   font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  border: 1px solid var(--color-primary);
+  letter-spacing: 0;
+  border: 1px solid rgba(196, 30, 58, 0.58);
   transition: all 0.3s ease;
 }
 
@@ -229,18 +237,24 @@
 }
 
 .chapterTitle {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.8rem;
   color: var(--color-primary);
   font-family: var(--font-header);
   margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
+  line-height: 1.35;
 }
 
 .chapterContent {
+  max-width: 860px;
+  margin: 0 auto;
   font-family: var(--font-body);
-  line-height: 2;
+  line-height: 2.05;
   color: var(--color-text-primary);
-  font-size: 1rem;
+  font-size: 1.02rem;
 }
 
 .chapterContent p {
@@ -254,10 +268,130 @@
   color: var(--color-primary);
 }
 
+.mediaFigure {
+  margin: 2.5rem auto;
+  border: 1px solid rgba(196, 30, 58, 0.42);
+  border-radius: 8px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(196, 30, 58, 0.12), transparent 42%),
+    rgba(17, 17, 22, 0.82);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.mediaImage,
+.mediaVideo {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  object-position: center;
+  background: #1a1a1f;
+  border-radius: 6px;
+}
+
+.mediaVideo {
+  aspect-ratio: 16 / 9;
+}
+
+.mediaCaption {
+  padding: 0.85rem 1rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.chapterSeparator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem auto;
+  color: var(--color-accent);
+  font-family: var(--font-header);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.chapterSeparator::before,
+.chapterSeparator::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, rgba(216, 180, 106, 0.52));
+}
+
+.chapterSeparator::after {
+  background: linear-gradient(90deg, rgba(216, 180, 106, 0.52), transparent);
+}
+
+.chapterSeparator span {
+  max-width: 70%;
+}
+
+.scareBlock {
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.scareButton {
+  width: min(100%, 420px);
+  min-height: 48px;
+  border: 1px solid rgba(216, 180, 106, 0.38);
+  background:
+    linear-gradient(180deg, rgba(196, 30, 58, 0.22), rgba(196, 30, 58, 0.1)),
+    var(--color-graphite);
+  color: var(--color-text-primary);
+  box-shadow: 0 0 28px rgba(196, 30, 58, 0.16);
+}
+
+.scareButton:hover {
+  border-color: var(--color-primary);
+  background:
+    linear-gradient(180deg, rgba(196, 30, 58, 0.42), rgba(196, 30, 58, 0.16)),
+    var(--color-graphite);
+}
+
+.scareReveal {
+  margin: 0;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 0 38px rgba(196, 30, 58, 0.38),
+    0 22px 54px rgba(0, 0, 0, 0.42);
+  animation: scareReveal 0.22s ease-out;
+}
+
+.scareImage {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+}
+
+@keyframes scareReveal {
+  0% {
+    filter: contrast(1.8) brightness(1.8);
+    transform: scale(1.03);
+  }
+  100% {
+    filter: contrast(1) brightness(1);
+    transform: scale(1);
+  }
+}
+
 .chapterNavigation {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid #3d1a1a;
+  border-top: 1px solid var(--color-line);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -270,7 +404,7 @@
 }
 
 .navButton {
-  background-color: var(--color-primary);
+  background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
   color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -279,7 +413,7 @@
   font-weight: 600;
   font-family: var(--font-body);
   transition: all 0.3s ease;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
 }
 
 .navButton:hover:not(:disabled) {
